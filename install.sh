@@ -84,7 +84,7 @@ install_base() {
 
 uninstall_old_v2ray() {
     if [[ -f /usr/bin/v2ray/v2ray ]]; then
-        confirm "The old version of v2ray is detected, whether to uninstall it, it will be deleted /usr/bin/v2ray/ 与 /etc/systemd/system/v2ray.service" "Y"
+        confirm "The old version of v2ray is detected, whether to uninstall it, it will be deleted /usr/bin/v2ray/ versus /etc/systemd/system/v2ray.service" "Y"
         if [[ $? != 0 ]]; then
             echo "Cannot install v2-ui without uninstalling"
             exit 1
@@ -229,7 +229,7 @@ install_v2-ui() {
     echo -e ""
     echo -e "If it is to update the panel, access the panel as you did before"
     echo -e ""
-    curl -o /usr/bin/v2-ui -Ls https://raw.githubusercontent.com/sprov065/v2-ui/master/v2-ui.sh
+    curl -o /usr/bin/v2-ui -Ls https://raw.githubusercontent.com/pcfreak/v2-ui/master/v2-ui.sh
     chmod +x /usr/bin/v2-ui
     echo -e "How to use v2-ui management script: "
     echo -e "----------------------------------------------"
